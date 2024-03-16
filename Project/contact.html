@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<style type="text/css">
+		h1
+		{
+   			margin-left:2%;
+   			margin-right: 2%;
+	   		margin-top:4%;
+			font-family: Algerian;
+			font-size: 50pt;
+			text-align: center;
+			text-decoration: underline;
+		}
+		form
+		{
+			font-family: monospace;
+			color: steelblue;
+		}
+		.container
+		{
+				background-color: blanchedalmond;
+				width: 90%;
+		}
+	</style>
+	<script type="text/javascript">
+		function chk(form)
+		{
+			if(form.fname.value=="")
+			{
+				alert("Pls Enter Name");
+			}
+			if(form.lname.value=="")
+			{
+				alert("Pls Enter Last Name");
+			}
+			if(form.add.value=="")
+			{
+				alert("Pls Enter Address")
+			}
+
+			var a=form.email.value;
+			var atpos=x.indexOf("@");
+			var dotpos=x.lastIndexOf(".");
+			if(atpos<1 || dotpos< atpos+2 || dotpos+2 >= x.length)
+			{
+				alert("Pls Enter Proper Email");
+			}
+
+			if(form.phone.value.length!=10)
+			{
+				alert("Pls Enter Proper phone no");
+			}
+			if(form.pcode.value.length!=6)
+			{
+				alert("Pls Enter Proper Proper Pincode");
+			}
+		else
+		{
+			window.location.href="home.html";
+		}
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<div class="container form-group">
+			<h1 class="py-3 text-center"><u><marquee>Registration Form</marquee></u></h1>
+			<div>
+				<label>Enter Name</label>
+				<input type="text" name="fname" placeholder="Enter Name" class="form-control">
+			</div><br>
+			<div>
+				<label>Enter Last Name</label>
+				<input type="text" name="lname" placeholder="Enter last name" class="form-control">
+			</div><br>
+			<div>
+				<label>Address</label>
+				<textarea class="form-control" name="add"></textarea>
+			</div><br>
+			<div>
+				<label>Email</label>
+				<input type="email" name="email" placeholder="abc@gmail.com" class="form-control">
+			</div><br>
+			<div>
+				<label>Phone</label>
+				<input type="INTEGER" name="phone" class="form-control">
+			</div><br>
+			<div>
+				<label>Country</label>
+				<select class="form-control" name="city">
+					<option> </option>
+					<option>India</option>
+					<option>Singapor</option>
+					<option>Dubai</option>
+					<option>Bali</option>
+				</select>
+			</div><br>
+			<div>
+				<label>Pincode</label>
+				<input type="INTEGER" name="pcode" class="form-control">
+			</div><br>
+			<center>
+			<div>
+				<input type="submit" value="Submit" class="btn btn-primary" onclick="chk(form)">
+
+				<input type="Reset" value="Reset" class="btn btn-warning">
+			</div></center>
+		</div>
+	</form>
+</body>
+</html>
